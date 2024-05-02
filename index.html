@@ -6,31 +6,46 @@
     <title>Halving Meme - The Most Fun Memecoin!</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        /* Custom CSS for efficient design and usability */
+        /* Custom CSS for enhanced design and usability */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.5;
+            margin: 0;
+            padding: 0;
         }
         
-        header {
-            padding: 20px;
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100vh;
             background-color: #f8f9fa;
+            padding: 20px;
+            overflow-y: auto;
         }
         
         .navbar-brand {
             font-size: 24px;
             font-weight: bold;
             color: #333;
-        }
-        
-        .navbar-nav {
-            display: flex;
-            flex-direction: column;
+            margin-bottom: 20px;
         }
         
         .nav-link {
+            display: block;
             margin-bottom: 10px;
             color: #333;
+            text-decoration: none;
+        }
+        
+        .nav-link:hover {
+            color: #000;
+        }
+        
+        .content {
+            margin-left: 250px;
+            padding: 20px;
         }
         
         #hero {
@@ -69,97 +84,66 @@
             text-align: center;
         }
         
-        @media (min-width: 768px) {
-            .navbar-nav {
-                flex-direction: row;
+        @media (max-width: 768px) {
+            .sidebar {
+                position: static;
+                width: 100%;
+                height: auto;
+                padding: 20px;
+                margin-bottom: 20px;
             }
             
-            .nav-link {
-                margin-bottom: 0;
-                margin-left: 20px;
+            .content {
+                margin-left: 0;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <a class="navbar-brand" href="#">Halving Meme</a>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#features">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#team">Team</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
+    <div class="sidebar">
+        <a class="navbar-brand" href="#">Halving Meme</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#features">Features</a>
+        <a class="nav-link" href="#team">Team</a>
+        <a class="nav-link" href="#contact">Contact</a>
+    </div>
+
+    <div class="content">
+        <section id="hero">
+            <h1>Have Fun with Halving Meme!</h1>
+            <p>The memecoin that will brighten your day and multiply your gains!</p>
+            <a href="#contact" class="btn btn-primary">Invest Now!</a>
+        </section>
+
+        <section id="about">
+            <h2>About Halving Meme</h2>
+            <p>Halving Meme is a memecoin created to bring joy and laughter to the world of cryptocurrencies. With a unique meme-based algorithm, it offers the opportunity to invest and have fun at the same time!</p>
+        </section>
+
+        <section id="features">
+            <h2>Halving Meme Features</h2>
+            <ul>
+                <li>Unique meme-based algorithm</li>
+                <li>Fast and secure transactions</li>
+                <li>Active and engaged community</li>
+                <li>Rewards for participation</li>
+                <li>Fair and transparent distribution</li>
             </ul>
-        </nav>
-    </header>
+        </section>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <nav class="navbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#features">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#team">Team</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
+        <section id="team">
+            <h2>Our Team</h2>
+            <div class="row">
+                <!-- Team Member Content -->
             </div>
-            <div class="col-md-9">
-                <section id="hero">
-                    <h1>Have Fun with Halving Meme!</h1>
-                    <p>The memecoin that will brighten your day and multiply your gains!</p>
-                    <a href="#contact" class="btn btn-primary">Invest Now!</a>
-                </section>
+        </section>
 
-                <section id="about">
-                    <h2>About Halving Meme</h2>
-                    <p>Halving Meme is a memecoin created to bring joy and laughter to the world of cryptocurrencies. With a unique meme-based algorithm, it offers the opportunity to invest and have fun at the same time!</p>
-                </section>
-
-                <section id="features">
-                    <h2>Halving Meme Features</h2>
-                    <ul>
-                        <li>Unique meme-based algorithm</li>
-                        <li>Fast and secure transactions</li>
-                        <li>Active and engaged community</li>
-                        <li>Rewards for participation</li>
-                        <liFair and transparent distribution</li>
-                    </ul>
-                </section>
-
-                <section id="team">
-                    <h2>Our Team</h2>
-                    <div class="row">
-                        <!-- Team Member Content -->
-                    </div>
-                </section>
-
-                <section id="contact">
-                    <h2>Contact Us</h2>
-                    <form>
-                        <!-- Contact Form Content -->
-                    </form>
-                </section>
-            </div>
-        </div>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <!-- Contact Form Content -->
+            </form>
+        </section>
     </div>
 
     <footer>
@@ -167,7 +151,6 @@
             <p>&copy; 2024 Halving Meme. All rights reserved.</p>
         </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
